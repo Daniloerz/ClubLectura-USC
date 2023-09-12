@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar perfil - Club de Lectura</title>
+    <link rel="stylesheet" href="estiloSignup.css">
+</head>
+<body>
+    <div class="register-container">
+        <p class="home"><a href="encontrarLibro.html">Atrás</a></p>
+        <img class="background-image" src="Imagenes/actualizar.jpeg" alt="Fondo de Pantalla">
+        <div class="register-box">
+            <h2>Actualizar datos</h2>
+            <form>
+                <label for="nombre">Nombre y Apellidos:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="documento">Documento de identidad:</label>
+                <input type="text" id="documento" name="documento" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="correo">Correo Personal:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <label for="direccion">Dirección de Residencia:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <fieldset>
+                    <legend>Géneros que disfrutas leer:</legend>
+                    <label><input type="checkbox" name="generos" value="Ficción"> Ficción</label>
+                    <label><input type="checkbox" name="generos" value="Drama"> Drama</label>
+                    <label><input type="checkbox" name="generos" value="Ciencia"> Ciencia</label>
+                    <label><input type="checkbox" name="generos" value="Terror"> Terror</label>
+                    <label><input type="checkbox" name="generos" value="Anime"> Anime</label>
+                    <label><input type="checkbox" name="generos" value="Historia"> Historia</label>
+                </fieldset>
+                
+                <button type="submit">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

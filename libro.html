@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descripción del Libro - Club de Lectura</title>
+    <link rel="stylesheet" href="estiloLibro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section">
+            <div class="options">
+                <p class="update"><a href="editarPerfil.html">Editar perfil</a></p>
+                <p class="home"><a href="encontrarLibro.html">Atrás</a></p>
+            </div>
+            <h1>Club de Lectura USC</h1>
+        </div>
+        <div class="lower-section">
+            <div class="book-details">
+                <img src="Imagenes/portadas-libros.jpg" alt="Portada del Libro">
+                <div class="book-info">
+                    <p><span class="descripcion">Título:</span> Titulo del libro</p>
+                    <p><span class="descripcion"> Autor:</span> Autor del libro </p>
+                    <p><span class="descripcion">Año de Publicación:</span> 20XX</p>
+                    <p><span class="descripcion">Género:</span> Género del Libro</p>
+                    <p><span class="descripcion">ISBN:</span> XXX-XXXXXXX</p>
+                    <p><span class="descripcion">Descripción:</span></p>
+                    <p>Descripción del libro seleccionado. Esta es una breve descripción que proporciona información sobre el contenido y la trama del libro.</p>
+                    <p><span class="descripcion">Estado:</span> Disponible</p>
+                </div>
+            </div>
+            <div class="user-rating">
+                <h3>Calificar el Libro</h3>
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" title="5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" title="4 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" title="3 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" title="2 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" title="1 star"></label>
+
+                    <button type="submit" onclick="setComentary()">Enviar</button>
+                </div>                
+                <input id="reseña" type="text" placeholder=" un comentario (máx. 200 caracteres)"></input>
+                <h3>Reseñas de usuarios</h3>
+                <div class="comentario">
+                    <p id="userName"><span class="descripcion"></span></p>
+                    <p id="comentary"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                <b>Creado por:</b>
+            </p>
+            <p>
+                <i>Danilo Ramirez,</i>
+                <i>Ivan Hortua,</i>
+                <i>Juan Azcarate</i>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b><i></i>Fecha y hora de ingreso</i></b>
+            </p>
+            <p id="date"><b></b> </p>
+        </div> 
+    </footer>
+
+    <script>
+        function getDate(){
+            let date = new Date;
+            document.getElementById("date").textContent = date.toLocaleString("es-Es");
+        }
+
+        function setComentary(){
+            let reseña = document.getElementById("reseña");
+            document.getElementById("userName").textContent = "Anonimo";
+            document.getElementById("comentary").textContent = reseña.value;
+        }
+
+        window.addEventListener("load", getDate);
+    </script>
+</body>
+</html>

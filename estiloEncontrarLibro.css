@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-section {
+    height: 20vh;
+    width: 100vw;
+    text-align: center;
+    background-image: linear-gradient(rgba(255,255,255,0.5),
+    rgba(255,255,255,0.5)), url(Imagenes/home.jpg);
+    background-position: center;
+    background-size: cover;    
+    padding: 20px;
+    flex: 1;
+}
+
+.upper-section h1 {
+    width: 50%;
+    margin: auto;
+    font-size: 50px;
+    border: solid;
+    border-color: black;
+    border-style: double;
+    font-weight: bold;
+    background-color: rgb(136, 46, 46);
+}
+
+.search-bar {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: rgb(136, 46, 46);
+    border: solid;
+    border-color: black;
+    border-style: double;
+}
+
+.search-bar label,
+.search-bar select,
+.search-bar button {
+    font-size: 20px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.lower-section {
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+    background-color: #0d0606;
+    flex: 1;
+}
+
+.lower-section h2 {
+    color: white;
+    margin: auto;
+    font-size: 40px;
+}
+.book-list {
+    display: flex;
+    gap: 20px;
+    margin: auto;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ver-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(136, 46, 46);
+    color: #fff;
+    border-radius: 5px;
+}
+
+button.ver-btn:hover {
+    background-color: #2980b9;
+}
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #682b2b;
+    padding: 10px;
+    width: 105vw;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: start;
+    text-align: start;
+}
+
+footer div {
+    display: inline-block;
+    margin: -10px 50px;
+}
+
+.options p{
+    display: block;
+    margin-bottom: 10px;
+}
+
+p.update a,
+p.home a {
+    text-decoration: none;
+    color: #f7f8f9;
+    border-radius: 5px;
+    border: solid;
+    border-color: white;
+    padding: 5px 15px;
+    font-size: 10px;
+}
+p.update a:hover,
+p.home a:hover {
+    color: #2980b9;
+}
+
+p.home {
+    position: fixed;
+    left: 30px; 
+    top: 10px
+}
+
+p.update {
+    position: fixed;
+    left: 30px; 
+    top: 50px
+}
+
+
+
+
+

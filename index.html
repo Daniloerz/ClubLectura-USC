@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Club de Lectura USC</title>
+    <link rel="stylesheet" href="estiloHome.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section">
+            <h1>Club de Lectura USC</h1>
+            <h3>Bienvenido al Club de Lectura</h3>
+            <p class="welcome">¡Explora libros, únete a discusiones y comparte tu amor por la lectura con nosotros!</p>
+        </div>
+        <div class="lower-section">
+            <div class="left-section">
+                <button class="login"><a href="login.html">Iniciar Sesión</a></button>
+            </div>
+            <div class="right-section">
+                <button class="signup"><a href="signup.html">Registrarse</a></button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                <b>Creado por:</b> 
+            </p>
+            <p>
+                <i>Danilo Ramirez,</i>
+                <i>Ivan Hortua,</i>
+                <i>Juan Azcarate</i>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b><i></i>Fecha y hora de ingreso</i></b>
+            </p>
+            <p id="date"><b></b> </p>
+        </div> 
+    </footer>
+
+    <script>
+        function getDate(){
+            let date = new Date;
+            document.getElementById("date").textContent = date.toLocaleString("es-Es");
+        }
+
+        window.addEventListener("load", getDate);
+    </script>
+        
+</body>
+</html>

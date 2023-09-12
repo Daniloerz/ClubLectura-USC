@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explorar Libros - Club de Lectura</title>
+    <link rel="stylesheet" href="estiloEncontrarLibro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section">
+            <div class="options">
+                <p class="update"><a href="editarPerfil.html">Editar perfil</a></p>
+                <p class="home"><a href="index.html">Salir</a></p>
+            </div>
+            <h1>Club de Lectura USC</h1>
+            <div class="search-bar">
+                <label for="genre">Buscar por género:</label>
+                <select id="genre" name="genre">
+                    <option value="Ficción">Ficción</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Ciencia">Ciencia</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Anime">Anime</option>
+                    <option value="Historia">Historia</option>
+                </select>
+                <button class="search-btn" onclick="getBookType()">Buscar</button>
+            </div>
+        </div>
+        <div class="lower-section">
+            <h2 id="bookType">Los más leídos de la semana</h2>
+            <div class="book-list">
+                <div class="book">
+                    <img class="portada" src="Imagenes/libro.jpg" alt="Portada Libro 1">
+                    <button class="ver-btn">
+                        <a href="libro.html">Ver</a>
+                    </button>
+                </div>
+                <div class="book">
+                    <img class="portada" src="Imagenes/libro.jpg" alt="Portada Libro 2">
+                    <button class="ver-btn">
+                        <a href="libro.html">Ver</a>
+                    </button>
+                </div>
+                <div class="book">
+                    <img class="portada" src="Imagenes/libro.jpg" alt="Portada Libro 3">
+                    <button class="ver-btn">
+                        <a href="libro.html">Ver</a>
+                    </button>
+                </div>
+                <div class="book">
+                    <img class="portada" src="Imagenes/libro.jpg" alt="Portada Libro 4">
+                    <button class="ver-btn">
+                        <a href="libro.html">Ver</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                <b>Creado por:</b>
+            </p>
+            <p>
+                <i>Danilo Ramirez,</i>
+                <i>Ivan Hortua,</i>
+                <i>Juan Azcarate</i>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b><i></i>Fecha y hora de ingreso</i></b>
+            </p>
+            <p id="date"><b></b> </p>
+        </div> 
+    </footer>
+    <script>
+        function getDate(){
+            let date = new Date;
+            document.getElementById("date").textContent = date.toLocaleString("es-Es");
+        }
+        window.addEventListener("load", getDate);
+
+        function getBookType(){
+            var select = document.getElementById('genre');
+            var searchBtn = document.getElementById('searchBtn');
+            var bookType = document.getElementById('bookType');
+            var portadas = document.querySelectorAll('.portada');
+
+            var valorSeleccionado = select.value;
+
+            if(valorSeleccionado == "Ficción"){
+                document.getElementById("bookType").textContent = "Libros de Ficción";
+
+            portadas.forEach(function(portada) {
+            portada.src = 'Imagenes/ficcion.jpeg';
+        });
+            } else {
+                document.getElementById("bookType").textContent = "Libros de " + valorSeleccionado;
+
+            portadas.forEach(function(portada) {
+            portada.src = 'Imagenes/' + valorSeleccionado.toLowerCase() + '.jpeg';
+        });   
+            }
+                 }
+
+    </script>
+</body>
+</html>

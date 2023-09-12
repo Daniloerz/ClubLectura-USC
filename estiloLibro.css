@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-section {
+    max-width: 100vw;
+    text-align: center;
+    background-color: rgb(136, 46, 46);
+    color: black;
+    padding: 10px;
+}
+
+.upper-section h1 {
+    width: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
+p.update a,
+p.home a {
+    text-decoration: none;
+    color: #f7f8f9;
+    border-radius: 5px;
+    border: solid;
+    border-color: white;
+    padding: 5px 15px;
+    font-size: 10px;
+}
+p.update a:hover,
+p.home a:hover {
+    color: #2980b9;
+}
+
+p.home {
+    position: fixed;
+    left: 30px; 
+    top: 5px
+}
+
+p.update {
+    position: fixed;
+    left: 100px; 
+    top: 5px
+}
+
+
+.lower-section {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-image: linear-gradient(rgba(255,255,255,0.5),
+    rgba(255,255,255,0.5)), url(Imagenes/detallesLibro.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+
+.book-details {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+     
+}
+
+.book-details img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid black;
+    padding: 20px black;
+    margin-right: 20px;
+}
+
+.book-info {
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: rgb(136, 46, 46);;
+    max-width: 400px;
+}
+
+.descripcion {
+    font-weight: bold;
+}
+
+.user-rating {
+    margin-right: 30px;
+    width: 700px;
+}
+
+.user-rating h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 24px;
+    color: blue;
+    cursor: pointer;
+    margin: 10px 2px;
+}
+
+.rating-stars label:before {
+    content: "\2605"; 
+}
+
+button{
+    margin-left: 400px;
+    margin-bottom: 5px;
+    background-color: rgb(136, 46, 46);;
+    padding: 5px 10px;
+    color: #f7f7f7;
+    border-radius: 5px;
+    border-style: none;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.user-rating input {
+    height: 50px;
+    width: 600px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #666060;
+    border-radius: 5px;
+}
+
+.comentario{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #666060;
+    border-radius: 5px;
+    width: 600px;
+}
+
+footer {
+    background-color: rgb(136, 46, 46);;
+    padding: 20px;
+    max-width: 100vw;
+    height: 66px;
+    justify-content: space-between;
+    align-items: start;
+    text-align: start;
+    
+}
+
+footer div {
+    display: inline-block;
+    margin: -10px 20px;
+}
+
