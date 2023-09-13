@@ -15,7 +15,10 @@
         </div>
         <div class="lower-section">
             <div class="book-details">
-                <img src="Imagenes/portadas-libros.jpg" alt="Portada del Libro">
+                <div class="imagenLibro">
+                    <img src="Imagenes/portadas-libros.jpg" alt="Portada del Libro">
+                    <button id="solicitar" onclick="estadoLibro()">Solicitar préstamo</button>
+                </div>
                 <div class="book-info">
                     <p><span class="descripcion">Título:</span> Titulo del libro</p>
                     <p><span class="descripcion"> Autor:</span> Autor del libro </p>
@@ -24,8 +27,9 @@
                     <p><span class="descripcion">ISBN:</span> XXX-XXXXXXX</p>
                     <p><span class="descripcion">Descripción:</span></p>
                     <p>Descripción del libro seleccionado. Esta es una breve descripción que proporciona información sobre el contenido y la trama del libro.</p>
-                    <p><span class="descripcion">Estado:</span> Disponible</p>
+                    <p><span class="descripcion">Estado:</span> En préstamo</p>
                 </div>
+                
             </div>
             <div class="user-rating">
                 <h3>Calificar el Libro</h3>
@@ -84,6 +88,10 @@
         }
 
         window.addEventListener("load", getDate);
+
+        function estadoLibro(){
+            alert("¡Lo sentimos! El libro se encuentra en préstamo")
+        }
     </script>
 </body>
 </html>
