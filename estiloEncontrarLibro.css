@@ -135,7 +135,8 @@ footer div {
 }
 
 p.update a,
-p.home a {
+p.home a,
+p.admin a {
     text-decoration: none;
     color: #f7f8f9;
     border-radius: 5px;
@@ -144,8 +145,10 @@ p.home a {
     padding: 5px 15px;
     font-size: 10px;
 }
+
 p.update a:hover,
-p.home a:hover {
+p.home a:hover,
+p.admin a:hover {
     color: #2980b9;
 }
 
@@ -159,6 +162,13 @@ p.update {
     position: fixed;
     left: 30px; 
     top: 50px
+}
+
+p.admin {
+    position: fixed;
+    right: 30px; 
+    bottom: 25px;
+    font-size: 30px;
 }
 
 
