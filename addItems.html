@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descripción del Libro - Club de Lectura</title>
+    <link rel="stylesheet" href="estiloAddItems.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section">
+            <div class="options">
+                <p class="update"><a href="editarPerfil.html">Editar perfil</a></p>
+                <p class="home"><a href="adminSeccion.html">Atrás</a></p>
+            </div>
+            <h1>Club de Lectura USC</h1>
+        </div>
+        <div class="lower-section">
+            <div class="adminSection">
+                <div class="section">
+                    <h2>Libros</h2>
+                    <ul>
+                        <p class="opciones"><a href="#">Buscar Libro</a></p>
+                        <p class="opciones"><a href="addItems.html">Agregar Libro</a></p>
+                        <p class="opciones"><a href="#">Editar Libro</a></p>
+                        <p class="opciones" style="border-bottom: solid 1px black;"><a href="#">Eliminar Libro</a></p>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Usuarios</h2>
+                    <ul>
+                        <p class="opciones"><a href="#">Buscar Usuario</a></p>
+                        <p class="opciones"><a href="addItems.html">Agregar Usuario</a></p>
+                        <p class="opciones"><a href="#">Editar Usuario</a></p>
+                        <p class="opciones" style="border-bottom: solid 1px black;"><a href="#">Eliminar Usuario</a></p>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Grupos</h2>
+                    <ul>
+                        <p class="opciones"><a href="#">Buscar grupo</a></p>
+                        <p class="opciones"><a href="addItems.html">Agregar grupo</a></p>
+                        <p class="opciones"><a href="#">Editar grupo</a></p>
+                        <p class="opciones"><a href="#">Eliminar grupo</a></p>
+                    </ul>
+                </div>
+            </div>
+            <div class="workSpace">
+                <div class="headerWorkSpace">
+                    <h2>Adicionar: Libro/Usuario/Grupo</h2>
+                    <button type="submit">Enviar</button>
+                </div>
+                <form id="addForm">
+                    <label for="nombre">Campo 1:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="documento">Campo 2:</label>
+                    <input type="text" id="documento" name="documento" required>
+                    
+                    <label for="telefono">Campo 3:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                    
+                    <label for="correo">Campo 4:</label>
+                    <input type="text" id="correo" name="correo" required>
+                    
+                    <label for="direccion">Campo 5:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+    
+                    <label for="password">Campo 6:</label>
+                    <input type="text" id="password" name="password" required>
+            
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                <b>Creado por:</b>
+            </p>
+            <p>
+                <i>Danilo Ramirez,</i>
+                <i>Ivan Hortua,</i>
+                <i>Juan Azcarate</i>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b><i></i>Fecha y hora de ingreso</i></b>
+            </p>
+            <p id="date"><b></b> </p>
+        </div> 
+    </footer>
+
+    <script>
+        function getDate(){
+            let date = new Date;
+            document.getElementById("date").textContent = date.toLocaleString("es-Es");
+        }
+
+        function setComentary(){
+            let reseña = document.getElementById("reseña");
+            document.getElementById("userName").textContent = "Anonimo";
+            document.getElementById("comentary").textContent = reseña.value;
+        }
+
+        window.addEventListener("load", getDate);
+
+        function estadoLibro(){
+            alert("¡Lo sentimos! El libro se encuentra en préstamo")
+        }
+    </script>
+</body>
+</html>

@@ -61,20 +61,17 @@ body {
     flex: 1;
 }
 
+.lower-section button {
+    flex-grow: 1; 
+    width: 300px;
+  }
+
 .left-section,
-.right-section {
-    width: 100%;
+.right-section,
+.middle-section {
     text-align: center;
     margin-bottom: 20px;
     flex: 1;
-}
-
-.left-section {
-    margin-left: 200px;
-}
-
-.right-section {
-    margin-right: 200px;
 }
 
 button {
