@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descripción del Libro - Club de Lectura</title>
+    <link rel="stylesheet" href="estiloClubDeLecturaInfo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-section">
+            <div class="options">
+                <p class="update"><a href="editarPerfil.html">Editar perfil</a></p>
+                <p class="home"><a href="encontrarLibroAdmin.html">Atrás</a></p>
+            </div>
+            <h1>Club: Gabo lectores</h1>
+        </div>
+        <div class="lower-section">
+            <div class="adminSection">
+                <div class="section">
+                    <h2>¡Participa!</h2>
+                    <ul>
+                        <p class="opciones"><a href="">Unirse al club</a></p>
+                        <p class="opciones"><a href="#">Ver lectores</a></p>
+                        <p class="opciones"><a href="#">Ver libros del club</a></p>
+                        <p class="opciones" style="border-bottom: solid 1px black;"><a href="#">Eliminar Libro</a></p>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Foro</h2>
+                    <ul>
+                        <p class="opciones"><a href="#">Empezar discusión</a></p>
+                        <p class="opciones"><a href="#">Buscar discusión</a></p>
+                        <p class="opciones" style="border-bottom: solid 1px black;"><a href="#">Recomendar libros</a></p>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>PQR</h2>
+                    <ul>
+                        <p class="opciones"><a href="#">Preguntas Frecuentes</a></p>
+                        <p class="opciones"><a href="#">Quejas y reclamos</a></p>
+                        <p class="opciones"><a href="#">Salir del grupo</a></p>
+                    </ul>
+                </div>
+            </div>
+            <div class="workSpace">
+                <div class="book-details">
+                    <div class="imagenLibro">
+                        <img src="Imagenes/club de lectura.jpeg" alt="Portada del Libro">
+                    </div>
+                    <div class="book-info">
+                        <p><span class="descripcion">Título:</span> Nombre del club</p>
+                        <p><span class="descripcion"> Autor:</span> Persona a cargo </p>
+                        <p><span class="descripcion">Año de Creación:</span> XXXX</p>
+                        <p><span class="descripcion">Categorías:</span> Catergorías principales</p>
+                        <p><span class="descripcion">ID:</span> XXX-XXXXXXX</p>
+                        <p><span class="descripcion">Descripción:</span></p>
+                        <p>Descripción del club de lectura. Esta es una breve descripción que proporciona información sobre lo importante del club.</p>
+                        <p><span class="descripcion">Estado:</span> En préstamo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                <b>Creado por:</b>
+            </p>
+            <p>
+                <i>Danilo Ramirez,</i>
+                <i>Ivan Hortua,</i>
+                <i>Juan Azcarate</i>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b><i></i>Fecha y hora de ingreso</i></b>
+            </p>
+            <p id="date"><b></b> </p>
+        </div> 
+    </footer>
+
+    <script>
+        function getDate(){
+            let date = new Date;
+            document.getElementById("date").textContent = date.toLocaleString("es-Es");
+        }
+
+        function setComentary(){
+            let reseña = document.getElementById("reseña");
+            document.getElementById("userName").textContent = "Anonimo";
+            document.getElementById("comentary").textContent = reseña.value;
+        }
+
+        window.addEventListener("load", getDate);
+
+        function estadoLibro(){
+            alert("¡Lo sentimos! El libro se encuentra en préstamo")
+        }
+    </script>
+</body>
+</html>

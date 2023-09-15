@@ -47,11 +47,20 @@ body {
     border: solid;
     border-color: black;
     border-style: double;
+    justify-content: space-between;
+    display: flex;
+
 }
+
+.search-bar div{
+    flex: 1;
+}
+
 
 .search-bar label,
 .search-bar select,
-.search-bar button {
+.search-bar button,
+.search-bar input {
     font-size: 20px;
     margin-right: 10px;
     padding-left: 10px;
